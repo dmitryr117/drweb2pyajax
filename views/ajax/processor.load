@@ -1,0 +1,8 @@
+<br>
+{{if rows:}}
+	{{for row in rows:}}
+		{{=DIV(row.name)}}
+	{{pass}}
+{{else:}}
+	Nothing
+{{pass}}

@@ -1,0 +1,15 @@
+{{extend 'layout.html'}}
+<div>{{=link}}</div>
+<div id="formhere"></div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#openform').click(function(){
+		$('#formhere').load("{{=URL('formholder')}}");
+	});
+	
+	$(document).on('submit', '#formid', function(){
+		ajax("{{=URL('formholder')}}", ['name'], 'formhere')
+		return false;
+	});
+});
+</script>
